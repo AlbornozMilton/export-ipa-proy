@@ -9,6 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss']
 })
+
 export class AppComponent {
   constructor(
     private platform: Platform,
@@ -20,6 +21,7 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
+      var port = process.env.PORT || 8000;
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
