@@ -21,7 +21,6 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      var port = process.env.PORT || 8000;
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
